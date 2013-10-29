@@ -34,10 +34,13 @@ class PostsController < ApplicationController
     post.category = params[:category]
     post.save
 
-    redirect_to recommendations_url
+    redirect_to posts_url
   end
 
   def destroy
+    post = Post.find_by(id: params[:id])
+    post.destroy
+    redirect_to posts_url
   end
 
 end

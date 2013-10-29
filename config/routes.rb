@@ -7,8 +7,9 @@ NewBlog::Application.routes.draw do
 
   get '/posts/:id' => 'posts#show', :as => 'show'
 
-  patch '/posts/:id' => 'posts#update'
   get '/posts/:id/edit' => 'posts#edit', :as => 'edit'
+  patch '/posts/:id' => 'posts#update'
+
 
   delete '/posts/:id' => 'posts#destroy'
 end

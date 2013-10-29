@@ -1,0 +1,11 @@
+<h1><%= @post.title %></h1>
+<p>We found: <%= @post.article %></p>
+<br>
+Category: <%= @post.category %>
+<br>
+
+<%= link_to "Edit this post", edit_url(@post.id) %>
+<br>
+<%= link_to "Delete this post", show_url(@post.id), :method => 'delete' %>
+<br>
+<%= link_to "Return to master list", posts_url %>

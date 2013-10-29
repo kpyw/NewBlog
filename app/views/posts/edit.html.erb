@@ -1,0 +1,15 @@
+<h1><%= @post.title %></h1>
+<%= form_tag edit_url(@post.id), :method => 'patch' do %>
+
+<%= label_tag 'title' %>
+<%= text_field_tag 'title' , @post.title %>
+<br>
+<%= label_tag 'article' %>
+<%= text_field_tag 'article', @post.article %>
+<br>
+<%= label_tag 'category' %>
+<%= text_field_tag 'category', @post.category %>
+<br>
+
+<%= submit_tag 'submit' %>
+<% end %>

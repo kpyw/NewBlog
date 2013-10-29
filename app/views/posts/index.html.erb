@@ -1,0 +1,7 @@
+<h1>Wolin Lab Pending Papers</h1>
+
+<% @posts.each do |post| %>
+  <p><%= link_to post.title, show_url(post.id)%></p>
+  <% end %>
+
+<%= link_to "Create new post", new_url %>
